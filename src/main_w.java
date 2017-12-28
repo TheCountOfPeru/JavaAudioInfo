@@ -2,6 +2,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JSplitPane;
+import java.awt.GridBagLayout;
+import javax.swing.JSeparator;
 /**
  * 
  * @author Jonathan
@@ -10,9 +12,19 @@ import javax.swing.JSplitPane;
 public class main_w extends JFrame{
 	
 	public main_w(){
+		getContentPane().setLayout(new BorderLayout(0, 0));
 		
-		JSplitPane splitPane = new JSplitPane();
-		getContentPane().add(splitPane, BorderLayout.CENTER);
+		JSeparator separator = new JSeparator();
+		getContentPane().add(separator, BorderLayout.CENTER);
+		
+		JPanel panel_1 = new JPanel();
+		getContentPane().add(panel_1, BorderLayout.WEST);
+		
+		JPanel panel_2 = new JPanel();
+		getContentPane().add(panel_2, BorderLayout.EAST);
+		
+		JPanel panel_3 = new JPanel();
+		getContentPane().add(panel_3, BorderLayout.SOUTH);
 		
 	}
 	public static void main(String[] args) {
